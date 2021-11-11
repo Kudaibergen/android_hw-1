@@ -24,21 +24,21 @@ class MainActivity2 : AppCompatActivity() {
 
         btn1.setOnClickListener {
             txtView.text = "RED"
-            Toast.makeText(this, "RED", Toast.LENGTH_SHORT).show()
+            txtView.setTextColor(Color.RED)
             linLayout.setBackgroundColor(Color.RED)
             btn1.setTextColor(Color.RED)
         }
 
         btn2.setOnClickListener {
             txtView.text = "YELLOW"
-            Toast.makeText(this, "YELLOW", Toast.LENGTH_SHORT).show()
+            txtView.setTextColor(Color.YELLOW)
             linLayout.setBackgroundColor(Color.YELLOW)
             btn2.setTextColor(Color.YELLOW)
         }
 
         btn3.setOnClickListener {
             txtView.text = "GREEN"
-            Toast.makeText(this, "GREEN", Toast.LENGTH_SHORT).show()
+            txtView.setTextColor(Color.GREEN)
             linLayout.setBackgroundColor(Color.GREEN)
             btn3.setTextColor(Color.GREEN)
         }
