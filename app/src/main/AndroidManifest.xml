@@ -13,6 +13,9 @@
             android:name=".MainActivity4"
             android:exported="false" />
         <activity
+            android:name=".Main4Activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
