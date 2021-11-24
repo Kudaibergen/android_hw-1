@@ -6,17 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity4">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_view1"
+
+    <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_view2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
