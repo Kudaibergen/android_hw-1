@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProgramAyimApp</string>
+    <string name="to">Кому:</string>
+    <string name="email_address">Email</string>
+    <string name="subject">Тема</string>
+    <string name="text">Напишите...</string>
 </resources>
