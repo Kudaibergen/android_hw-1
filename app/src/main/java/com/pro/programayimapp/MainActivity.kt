@@ -9,9 +9,9 @@ import net.objecthunter.exp4j.ExpressionBuilder
 import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityMainBinding // private
 
-    var lastNumeric: Boolean = false
+    var lastNumeric: Boolean = false // переменная нигде не спользуется
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +19,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        
+        // здесь можно исп-ть функции with/apply
+        // чтобы не писать постоянно binding...
+
+//        binding.apply {
+//            clear.setOnClickListener { /* ... */ }
+//            zero.setOnClickListener { /* ... */ }
+//            one.setOnClickListener { /* ... */ }
+//            //...
+//        }
+
+        // блок кликов можно вынести в отдельный метод
         binding.clear.setOnClickListener {
             binding.txtView1.text = ""
             binding.txtView2.text = ""
