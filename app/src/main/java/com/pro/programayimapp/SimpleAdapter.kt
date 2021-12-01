@@ -6,9 +6,8 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 
-class SimpleAdapter(
-    private val click: (pos: Int) -> Unit
-) : RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
+class SimpleAdapter(private val click: (pos: Int) -> Unit) : RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
+
     private var list = listOf<String>()
 
     fun setData(list: List<String>) {
@@ -18,12 +17,13 @@ class SimpleAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView: View = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_2, parent, false)
+            .inflate(R.layout.item_recycle, parent, false)
         return ViewHolder(itemView, click)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
+
         holder.bind(item)
     }
 
