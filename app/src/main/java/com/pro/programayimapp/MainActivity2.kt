@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.widget.ConstraintLayout
 
+// приложение крашится на старте
+
 class MainActivity2 : AppCompatActivity() {
     private lateinit var txtView: TextView
     private lateinit var linLayout: ConstraintLayout
