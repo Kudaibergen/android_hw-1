@@ -4,4 +4,6 @@
     <string name="email_address">Email</string>
     <string name="subject">Тема</string>
     <string name="text">Напишите...</string>
+    <string name="letter_text">Письмо</string>
+    <string name="send_btn">Отправить</string>
 </resources>
