@@ -26,15 +26,15 @@ class Fragment1: Fragment(R.layout.fragment_1)  {
         super.onViewCreated(view, savedInstanceState)
 
         val recycler = view.findViewById<RecyclerView>(R.id.fr_recycler)
-        val layoutManager = LinearLayoutManager(this.context)
+        val layoutManager = LinearLayoutManager(activity)
         val adapter = SimpleAdapter {
-            Toast.makeText(this.context, "ITEM -$it", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, "ITEM -$it", Toast.LENGTH_SHORT).show()
             listener.onClicked("ITEM -$it")
         }
 
         recycler.layoutManager = layoutManager
         recycler.adapter = adapter
-        recycler.addItemDecoration(DividerItemDecoration(this.context, RecyclerView.VERTICAL))
+        recycler.addItemDecoration(DividerItemDecoration(activity, RecyclerView.VERTICAL))
 
 
         val list = mutableListOf<String>()
