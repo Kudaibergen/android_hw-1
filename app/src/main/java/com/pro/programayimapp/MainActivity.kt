@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
                 putExtra(Intent.EXTRA_TEXT, letter)
             }
 
+            // на апи > 30, будет всегда показывать тоаст
             if (intent.resolveActivity(packageManager) != null){
                 startActivity(intent)
             }else{
