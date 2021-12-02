@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
+import com.pro.programayimapp.databinding.ItemRecycleBinding
 
 class SimpleAdapter(private val click: (pos: Int) -> Unit) : RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
 
@@ -16,6 +17,7 @@ class SimpleAdapter(private val click: (pos: Int) -> Unit) : RecyclerView.Adapte
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
         val itemView: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_recycle, parent, false)
         return ViewHolder(itemView, click)
@@ -31,10 +33,9 @@ class SimpleAdapter(private val click: (pos: Int) -> Unit) : RecyclerView.Adapte
         return list.size
     }
 
-    class ViewHolder(
-        itemView: View,
-        private val click: (pos: Int) -> Unit
+    class ViewHolder( itemView: View, private val click: (pos: Int) -> Unit
     ) : RecyclerView.ViewHolder(itemView) {
+//        val binding = ItemRecycleBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         fun bind(item: String) {
             val txt = itemView.findViewById<AppCompatTextView>(R.id.item_txt)

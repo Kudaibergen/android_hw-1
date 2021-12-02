@@ -1,19 +1,24 @@
 package com.pro.programayimapp
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.widget.AppCompatButton
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.pro.programayimapp.databinding.ActivityMain2Binding
 
 class MainActivity2 : AppCompatActivity() {
-    private lateinit var txtView: TextView
-    private lateinit var linLayout: ConstraintLayout
+    private lateinit var binding: ActivityMain2Binding
+    private lateinit var txt: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        binding = ActivityMain2Binding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+//        val txt = intent.getStringExtra("samplename").toString()
+        binding.active2Txt.text = intent.getStringExtra("text")
+
+
 
     }
 }
