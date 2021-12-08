@@ -10,9 +10,6 @@ class MainActivity : AppCompatActivity(), OnButtonClicked {
         initFragments()
     }
 
-    override fun onButtonClicked(text: String) {
-//        val txt.text = text
-    }
 
     private fun initFragments() {
         supportFragmentManager.beginTransaction()
