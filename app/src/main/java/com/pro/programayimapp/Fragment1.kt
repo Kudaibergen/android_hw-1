@@ -15,8 +15,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class Fragment1: Fragment(R.layout.fragment_1)  {
+    private lateinit var listener: OnButtonClicked
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        listener = context as OnButtonClicked
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val btn1 = view.findViewById<AppCompatButton>(R.id.btn1)
+
+        btn1.setOnClickListener {
+//            listener.onButtonClicked()
+
         }
+    }
 }
