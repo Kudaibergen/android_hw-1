@@ -10,14 +10,14 @@ class MainActivity : AppCompatActivity(), OnButtonClicked {
         initFragments()
     }
 
+    override fun onButtonClicked(text: String) {
+        TODO("Not yet implemented")
+    }
 
     private fun initFragments() {
-        supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container, Fragment1())
-            .commit()
 
         supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container2, Fragment2())
+            .add(R.id.fragment_container, Fragment1())
             .commit()
     }
 
