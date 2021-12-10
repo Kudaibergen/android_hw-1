@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity(), OnButtonClicked {
     }
 
     private fun initFragments() {
-
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, Fragment1())
             .commit()
