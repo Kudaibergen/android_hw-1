@@ -22,6 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
         android:layout_margin="16dp"
         app:layout_constraintTop_toBottomOf="@id/txtReg"
@@ -32,6 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="textPassword"
         android:layout_margin="16dp"
         app:layout_constraintTop_toBottomOf="@id/email"/>

@@ -1,7 +1,6 @@
 package com.pro.programayimapp
 
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -13,8 +12,6 @@ class Fragment1: Fragment(R.layout.fragment_1)  {
 
     private lateinit var listener: OnButtonClicked
 
-//    private lateinit var editEmail: AppCompatTextView
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         listener = context as OnButtonClicked
@@ -24,7 +21,7 @@ class Fragment1: Fragment(R.layout.fragment_1)  {
         super.onViewCreated(view, savedInstanceState)
         _binding = Fragment1Binding.bind(view)
         binding.apply{
-            val prefs = requireContext().getSharedPreferences("MyPrefs", MODE_PRIVATE)
+            val prefs = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 
             btnReg.setOnClickListener {
                 val regEmail = prefs.getString("email", "")
