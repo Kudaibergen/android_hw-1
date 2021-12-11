@@ -7,4 +7,5 @@
     <string name="btn3">BTN3</string>
     <string name="this_is_fragment">This is fragment 2 with ImageView</string>
     <string name="this_is_fragment_1">This is fragment 1</string>
+    <string name="login_btn">Войти</string>
 </resources>

@@ -3,18 +3,14 @@ package com.pro.programayimapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity(), OnButtonClicked {
+class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initFragments()
+        initFragment()
     }
 
-    override fun onButtonClicked(text: String) {
-        TODO("Not yet implemented")
-    }
-
-    private fun initFragments() {
+    private fun initFragment() {
         supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, Fragment1())
             .commit()
