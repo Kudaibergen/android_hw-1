@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/fr2_toolbar"
+        android:id="@+id/fr3_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/teal_700"
         android:theme="@style/Navigation"
-        app:title="Главная"
+        app:title="О себе"
         app:titleTextColor="@color/white"
+        app:navigationIcon="?attr/homeAsUpIndicator"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:gravity="center"
-        android:text="Главная"
+        android:text="О себе"
         android:textColor="@color/teal_700"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

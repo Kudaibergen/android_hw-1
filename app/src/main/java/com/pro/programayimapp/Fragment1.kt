@@ -45,10 +45,12 @@ class Fragment1: Fragment(R.layout.fragment_1)  {
         }
     }
 
+// Проверка email
     private fun isValidEmail(email: String): Boolean {
         return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
+// Если поле пустое кнопка неактивна
     private val loginTextWatcher = object :TextWatcher{
         override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
@@ -57,11 +59,11 @@ class Fragment1: Fragment(R.layout.fragment_1)  {
             val passwordText = password.text.toString().trim()
             btnLogin.isEnabled = emailText.isNotEmpty() && passwordText.isNotEmpty()
         }
-
         override fun afterTextChanged(p0: Editable?) {}
     }
 
-    override fun onSaveInstanceState(outState: Bundle) { // Here You have to save count value
+// Change orientation
+    override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.i("MyTag", "onSaveInstanceState")
 

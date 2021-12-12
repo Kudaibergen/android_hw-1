@@ -3,8 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fr1_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/teal_700"
+        android:theme="@style/Navigation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Авторизация"
+        app:titleTextColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txtLogin"
@@ -15,7 +24,7 @@
         android:layout_margin="16dp"
         android:layout_marginTop="220dp"
         android:text="Fragment1"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/fr1_toolbar"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/email"
@@ -23,7 +32,6 @@
         android:layout_height="wrap_content"
         android:hint="Email"
         android:lines="1"
-        android:text="altynai@gmail.com"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
@@ -37,7 +45,6 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:lines="1"
-        android:text="altynai"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:inputType="textPassword"
